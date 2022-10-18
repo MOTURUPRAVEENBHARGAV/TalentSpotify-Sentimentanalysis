@@ -10,10 +10,6 @@ chardet
 charset-normalizer==2.1.0
 click==8.1.3
 cloudpickle
-colorama 
-cookiecutter 
-cryptography 
-cycler==0.11.0
 debugpy 
 decorator 
 defusedxml
@@ -36,9 +32,6 @@ h5py
 huggingface-hub==0.9.1
 idna 
 imagesize
-imbalanced-learn==0.9.1
-imblearn==0.0
-importlib-metadata==4.12.0
 inflection==0.5.1
 intervaltree 
 ipykernel 
@@ -53,7 +46,6 @@ jupyter-client
 jupyter_core 
 jupyterlab-pygments 
 keras==2.9.0
-Keras-Preprocessing==1.1.2
 keyring 
 kiwisolver==1.4.4
 lazy-object-proxy 
@@ -131,9 +123,6 @@ requests-oauthlib==1.3.1
 rope 
 rsa==4.9
 Rtree
-scikit-learn==1.1.2
-scipy==1.9.1
-seaborn==0.11.2
 sip 
 six
 sortedcontainers
@@ -141,13 +130,8 @@ soupsieve
 spyder 
 spyder-kernels
 stack-data 
-tenacity==8.0.1
-tensorboard==2.9.1
-tensorboard-data-server==0.6.1
-tensorboard-plugin-wit==1.8.1
 tensorflow==2.9.1
 tensorflow-estimator==2.9.0
-tensorflow-io-gcs-filesystem==0.26.0
 termcolor==1.1.0
 testpath 
 text-unidecode
