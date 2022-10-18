@@ -89,8 +89,6 @@ nbclient
 nbconvert
 nbformat 
 nest-asyncio 
-ngrok-api==0.8.0
-nltk==3.7
 numpy==1.23.3
 numpydoc 
 oauthlib==3.2.0
@@ -191,7 +189,6 @@ tokenizers==0.12.1
 toml 
 tomli
 tomlkit
-torch==1.12.1
 tornado 
 tqdm==4.64.0
 traitlets
