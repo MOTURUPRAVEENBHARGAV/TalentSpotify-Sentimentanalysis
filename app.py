@@ -12,8 +12,8 @@ import json
 from flask_cors import CORS
 
 #load the MODEL 
-tokenizer = AutoTokenizer.from_pretrained("./model")
-multi_model = TFAutoModelForSequenceClassification.from_pretrained("./model",num_labels=5)
+tokenizer = AutoTokenizer.from_pretrained(r"E:\DESKT\INTERNSHIPS\Talent Spotify\NLP Tasks\Sentiment Analysis\Deploy\model")
+multi_model = TFAutoModelForSequenceClassification.from_pretrained(r"E:\DESKT\INTERNSHIPS\Talent Spotify\NLP Tasks\Sentiment Analysis\Deploy\model",num_labels=5)
 #WSGI Application
 app= Flask(__name__) #Flask App Object
 CORS(app)
@@ -66,6 +66,30 @@ def postData():
             content["inputs"][i]["Polarity"] = pred[i]
 
     return content
+
+@app.route('/test',methods=['POST', 'GET'])
+def testdata():
+    data = {"inputs":[{"Question":"",
+               "Employer":"Manager",
+               "Response":"Good"},
+               {"Question":" ",
+               "Employer": "Peers",
+               "Response":"Behaviour is very furious"},
+               {"Question":"",
+               "Employer": "Self",
+               "Response":"Very Rude to colleagues"}
+               ]}
+    l=[]
+    for input in data["inputs"]:
+        l.append(input["Response"])
+    pred = model_predict(multi_model,tokenizer,lis=l)
+    pred = change_labels(pred)
+    for i in range(0,len(l)):
+        data["inputs"][i]["Polarity"] = pred[i]
+    # print(data)
+
+    return data
+
 
 if __name__ == '__main__':
     app.run(debug = True)
