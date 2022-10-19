@@ -12,8 +12,8 @@ import json
 from flask_cors import CORS
 
 #load the MODEL 
-tokenizer = AutoTokenizer.from_pretrained(r"E:\DESKT\INTERNSHIPS\Talent Spotify\NLP Tasks\Sentiment Analysis\Deploy\model")
-multi_model = TFAutoModelForSequenceClassification.from_pretrained(r"E:\DESKT\INTERNSHIPS\Talent Spotify\NLP Tasks\Sentiment Analysis\Deploy\model",num_labels=5)
+tokenizer = AutoTokenizer.from_pretrained(".\model")
+multi_model = TFAutoModelForSequenceClassification.from_pretrained(".\model",num_labels=5)
 #WSGI Application
 app= Flask(__name__) #Flask App Object
 CORS(app)
